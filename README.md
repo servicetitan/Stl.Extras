@@ -1,6 +1,7 @@
 > All project updates are published on our [Discord Server](https://discord.gg/EKEwv6d); it's also the best place for Q/A.\
 > [![Build](https://github.com/servicetitan/Stl.Extras/workflows/Build/badge.svg)](https://github.com/servicetitan/Stl.Extras/actions?query=workflow%3A%22Build%22)
 > [![NuGetVersion](https://img.shields.io/nuget/v/Stl.Plugins)](https://www.nuget.org/packages/Stl.Plugins) 
+> [![codecov](https://codecov.io/gh/servicetitan/Stl.Extras/branch/master/graph/badge.svg)](https://codecov.io/gh/servicetitan/Stl.Extras)
 
 **Stl.Extras** is a collection of packages that are also a part of open-source
 ServiceTitan Library, but aren't related to [Stl.Fusion](https://github.com/servicetitan/Stl.Fusion).
