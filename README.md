@@ -11,7 +11,7 @@ It includes:
 
 | NuGet Package  | Description |
 | ------------- | ------------- |
-| Stl.Plugins  | MEF-style plugin library that focuses on core capabilities needed to add plugins to your applicatin - namely, building an IoC container hosting them. |
+| Stl.Plugins  | MEF-style plugin library that focuses on core capabilities needed to add plugins to your application - namely, building an IoC container hosting them. |
 | Stl.Plugins.Extensions  | Extensions allowing plugins to "tweak" `IHostBuilder` and other startup logic. |
 | Stl.CommandLine  | A set of abstractions helping to construct typed wrappers for command line tools. |
 | Stl.Hosting  | An experimental host similar to `IHost` that supports extensions via Stl.Plugins.  |

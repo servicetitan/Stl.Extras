@@ -5,7 +5,7 @@
     <PackageTags>servicetitan stl plugins</PackageTags>
     <Description><!--
       -->MEF-style plugin library that focuses on core capabilities <!--
-      -->needed to add plugins to your applicatin - namely, <!--
+      -->needed to add plugins to your application - namely, <!--
       -->building an IoC container hosting them. <!--
       -->It is designed to load plugins on demand - the assemblies <!--
       -->hosting plugins are loaded only once you access the plugins <!--
