@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Stl.DependencyInjection;
 using Stl.Extensibility;
 using Stl.Hosting.Plugins;
 using Stl.Plugins;
