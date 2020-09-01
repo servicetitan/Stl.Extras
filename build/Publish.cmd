@@ -1,1 +1,1 @@
-@powershell -file Publish.ps1 %*
+@dotnet run --project Build.csproj --configuration Release --no-launch-profile -- --configuration Release publish
