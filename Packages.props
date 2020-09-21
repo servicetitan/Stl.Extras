@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="latest" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <EntityFrameworkCoreVersion>3.1.7</EntityFrameworkCoreVersion>
-    <AspNetCoreVersion>3.1.7</AspNetCoreVersion>
+    <EntityFrameworkCoreVersion>3.1.8</EntityFrameworkCoreVersion>
+    <AspNetCoreVersion>3.1.8</AspNetCoreVersion>
     <BlazorVersion>3.2.1</BlazorVersion>
     <SystemNetHttpJsonVersion>3.2.1</SystemNetHttpJsonVersion>
-    <StlFusionVersion>0.4.29</StlFusionVersion>
+    <StlFusionVersion>0.5.2</StlFusionVersion>
   </PropertyGroup>
   <ItemGroup Label="Nupkg Versions">
     <PackageReference Update="AutoMapper" Version="10.0.0" />
     <PackageReference Update="Autofac" Version="5.2.0" />
     <PackageReference Update="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Update="Autofac.Extras.DynamicProxy" Version="5.0.0" />
-    <PackageReference Update="AutoFixture" Version="4.13.0" />
-    <PackageReference Update="AutoFixture.Xunit2" Version="4.13.0" />
+    <PackageReference Update="AutoFixture" Version="4.14.0" />
+    <PackageReference Update="AutoFixture.Xunit2" Version="4.14.0" />
     <PackageReference Update="Bullseye" Version="3.4.0" />
     <PackageReference Update="Castle.Core" Version="4.4.1" />
     <PackageReference Update="Castle.Core.AsyncInterceptor" Version="1.7.0" />
