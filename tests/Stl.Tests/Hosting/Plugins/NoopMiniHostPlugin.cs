@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
+using Stl.DependencyInjection;
 using Stl.Hosting;
 using Stl.Plugins;
 using Stl.Plugins.Extensions.Hosting;
@@ -16,12 +17,13 @@ namespace Stl.Tests.Hosting.Plugins
         protected MiniHostBuilder MiniHostBuilder { get; set; }
 
         public NoopMiniHostPlugin() : this(null!, null!) { }
+        [ServiceConstructor]
         public NoopMiniHostPlugin(
             IPluginHost plugins,
             IAppHostBuilder appHostBuilder,
             ILogger<NoopMiniHostPlugin>? log = null)
         {
-            _log = log ??= NullLogger<NoopMiniHostPlugin>.Instance; 
+            _log = log ??= NullLogger<NoopMiniHostPlugin>.Instance;
             Plugins = plugins;
             MiniHostBuilder = (MiniHostBuilder) appHostBuilder;
         }

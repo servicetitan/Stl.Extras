@@ -1,4 +1,5 @@
 using System.CommandLine.Invocation;
+using Stl.DependencyInjection;
 using Stl.Hosting;
 using Stl.Hosting.Plugins;
 using Stl.Plugins;
@@ -13,6 +14,7 @@ namespace Stl.Tests.Hosting.Plugins
         protected MiniHostBuilder MiniHostBuilder { get; } = null!;
 
         public MiniHostPrimaryCliPlugin() { }
+        [ServiceConstructor]
         public MiniHostPrimaryCliPlugin(IPluginHost plugins, IAppHostBuilder appHostBuilder)
             : base(plugins, appHostBuilder)
         {

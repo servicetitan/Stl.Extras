@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using FluentAssertions;
+using Stl.DependencyInjection;
 using Stl.Plugins;
 using Stl.Tests.Plugins;
 
@@ -33,7 +34,9 @@ namespace Stl.Tests.Plugins
     public class TestPlugin1 : TestPlugin, IHasDependencies, ITestSingletonPlugin
     {
         public IEnumerable<Type> Dependencies { get; } = new [] { typeof(TestPlugin2) };
+
         public TestPlugin1(IPluginInfoQuery query) { }
+        [ServiceConstructor]
         public TestPlugin1() { }
     }
 
@@ -47,6 +50,8 @@ namespace Stl.Tests.Plugins
             }.ToImmutableDictionary();
 
         public TestPlugin2(IPluginInfoQuery query) { }
+
+        [ServiceConstructor]
         public TestPlugin2(IServiceProvider services)
         {
             services.Should().NotBeNull();

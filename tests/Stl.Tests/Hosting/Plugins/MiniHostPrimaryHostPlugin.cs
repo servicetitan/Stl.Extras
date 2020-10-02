@@ -3,6 +3,7 @@ using Autofac;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Stl.DependencyInjection;
 using Stl.Hosting;
 using Stl.Hosting.Plugins;
 using Stl.Plugins;
@@ -17,6 +18,7 @@ namespace Stl.Tests.Hosting.Plugins
         protected MiniHostBuilder MiniHostBuilder { get; } = null!;
 
         public MiniHostPrimaryHostPlugin() { }
+        [ServiceConstructor]
         public MiniHostPrimaryHostPlugin(IPluginHost plugins, IAppHostBuilder appHostBuilder)
             : base(plugins, appHostBuilder)
         {
