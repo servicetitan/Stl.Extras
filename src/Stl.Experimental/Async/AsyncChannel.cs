@@ -64,7 +64,7 @@ namespace Stl.Async
         public AsyncChannel(Memory<T> buffer, TaskCreationOptions taskCreationOptions = default)
         {
             if (buffer.Length <= 1)
-                throw Errors.BufferLengthMustBeGreaterThanOne(nameof(buffer));
+                throw ExperimentalErrors.BufferLengthMustBeGreaterThanOne(nameof(buffer));
             Size = buffer.Length - 1; // To make sure that "buffer is full" != "buffer is empty"
             _buffer = buffer;
             _taskCreationOptions = taskCreationOptions;
@@ -92,7 +92,7 @@ namespace Stl.Async
                     await WaitForDequeueAsync(cancellationToken).ConfigureAwait(false);
                 lock (Lock) {
                     if (IsPutCompleted)
-                        throw Errors.EnqueueCompleted();
+                        throw ExperimentalErrors.EnqueueCompleted();
                     if (FreeCountNoLock == 0)
                         continue;
                     _buffer.Span[_writePosition] = item;
@@ -110,7 +110,7 @@ namespace Stl.Async
                     await WaitForDequeueAsync(cancellationToken).ConfigureAwait(false);
                 lock (Lock) {
                     if (IsPutCompleted)
-                        throw Errors.EnqueueCompleted();
+                        throw ExperimentalErrors.EnqueueCompleted();
                     var availableLength = FreeCountNoLock;
                     if (availableLength == 0)
                         continue;
@@ -172,7 +172,7 @@ namespace Stl.Async
         public async ValueTask<int> PullAsync(Memory<T> target, CancellationToken cancellationToken = default)
         {
             if (target.Length <= 0)
-                throw Errors.BufferLengthMustBeGreaterThanZero(nameof(target));
+                throw ExperimentalErrors.BufferLengthMustBeGreaterThanZero(nameof(target));
             var readLength = 0;
             while (target.Length > 0) {
                 if (IsEmpty) {
